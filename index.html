@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript3</title>
+</head>
+<body>
+    <script>
+        function solution(num) {
+        const outputArray = [];
+        for(let i = 1; i <= num; i++) {
+        let str = '';
+        let check = false; 
+        if(i % 2 === 0) { 
+            str += 'yu';
+            check = true;
+        } 
+        if(i % 3 === 0) { 
+            if(check) str += '-'; 
+            str += 'gi';
+            check = true;
+        } 
+        if(i % 5 === 0) { 
+            if(check) str += '-'; 
+            str += 'oh';
+            check = true;
+        } 
+        if(check) { 
+            outputArray.push(str); 
+        }else{ 
+            outputArray.push(i);
+        }
+        
+        }
+        return outputArray;
+        }
+
+        console.log(solution(100));
+        console.log(solution(200));
+    </script>
+</body>
+</html>
